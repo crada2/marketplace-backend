@@ -18,7 +18,6 @@ public class Nft {
     private int price;
 
     public Nft() {
-
     }
 
     public int getId() {
