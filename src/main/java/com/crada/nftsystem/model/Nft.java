@@ -1,9 +1,8 @@
 package com.crada.nftsystem.model;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import javax.persistence.*;
 
 @Entity
 public class Nft {
@@ -13,8 +12,11 @@ public class Nft {
     private int id;
     private String image;
     private String title;
-    private String username;
     private String description;
+    @ManyToOne
+    @JoinColumn(name = "seller_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    private Seller seller;
     private int price;
 
     public Nft() {
@@ -44,14 +46,6 @@ public class Nft {
         this.title = title;
     }
 
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
     public String getDescription() {
         return description;
     }
@@ -66,5 +60,13 @@ public class Nft {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public Seller getSeller() {
+        return seller;
+    }
+
+    public void setSeller(Seller seller) {
+        this.seller = seller;
     }
 }
