@@ -13,14 +13,13 @@ public class Nft {
     private String image;
     private String title;
     private String description;
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
     @JoinColumn(name = "seller_id")
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Seller seller;
     private int price;
 
-    public Nft() {
-    }
+
 
     public int getId() {
         return id;

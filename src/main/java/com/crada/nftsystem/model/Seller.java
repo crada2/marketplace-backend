@@ -18,13 +18,7 @@ public class Seller {
     @OneToMany(mappedBy = "seller", cascade = CascadeType.ALL)
     private Set<Nft> nfts = new HashSet<>();
 
-    public Seller() {
-    }
 
-    public Seller(int id, String name) {
-        this.id = id;
-        this.name = name;
-    }
 
     public int getId() {
         return id;

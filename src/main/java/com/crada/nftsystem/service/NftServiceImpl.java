@@ -1,4 +1,4 @@
-package com.crada.nftsystem.service;
+/*package com.crada.nftsystem.service;
 
 import com.crada.nftsystem.model.Nft;
 import com.crada.nftsystem.repository.NftRepository;
@@ -23,3 +23,4 @@ public class NftServiceImpl implements NftService {
     }
 
 }
+*/
