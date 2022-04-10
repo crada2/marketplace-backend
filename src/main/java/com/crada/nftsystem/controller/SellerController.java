@@ -3,7 +3,6 @@ package com.crada.nftsystem.controller;
 import com.crada.nftsystem.model.Seller;
 import com.crada.nftsystem.repository.NftRepository;
 import com.crada.nftsystem.repository.SellerRepository;
-import org.apache.coyote.Response;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -11,10 +10,10 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
-
 import java.net.URI;
 import java.util.Optional;
 
+@CrossOrigin
 @RestController
 @RequestMapping("/sellers")
 public class SellerController {

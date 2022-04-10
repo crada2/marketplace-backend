@@ -87,7 +87,4 @@ public class NftController {
 
         return ResponseEntity.ok(optionalNft.get());
     }
-
-
-
 }
